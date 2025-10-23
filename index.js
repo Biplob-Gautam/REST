@@ -11,6 +11,36 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname,"public")));
 
+
+
 app.listen(port , ()=>{
     console.log("App is listening");
+});
+
+let posts = [
+    {
+        username : "Bg",
+        content: "Hi i am bg"
+    },
+
+    {
+        username : "Bg",
+        content: "Hi i am bg"
+    },
+
+    {
+        username : "Bg",
+        content: "Hi i am bg"
+    },
+]
+
+
+
+app.get("/" , (req,res)=> {
+    res.render("home.ejs");
+    res.redirect("/posts");
+});
+
+app.get("/posts" , (req,res) => {
+    res.render("index.ejs" , {posts});
 });
