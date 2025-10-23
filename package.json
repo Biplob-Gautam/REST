@@ -1,0 +1,24 @@
+{
+  "name": "rest",
+  "version": "1.0.0",
+  "description": "I created this repo to practice REST-APIs and their working.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Biplob-Gautam/REST.git"
+  },
+  "keywords": [],
+  "author": "Biplob-Gautam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Biplob-Gautam/REST/issues"
+  },
+  "homepage": "https://github.com/Biplob-Gautam/REST#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
