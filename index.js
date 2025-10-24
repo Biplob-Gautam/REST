@@ -37,10 +37,25 @@ let posts = [
 
 
 app.get("/" , (req,res)=> {
-    res.render("home.ejs");
-    res.redirect("/posts");
+    // res.render("home.ejs");
+    res.redirect("/posts");//for now the home page do not open and even if searched it directly direct you to /posts
 });
 
 app.get("/posts" , (req,res) => {
     res.render("index.ejs" , {posts});
 });
+
+
+app.get("/posts/new" , (req,res)=> {
+    res.render("newpost.ejs"); 
+    // res.redirect("/posts");
+});
+
+app.post("/posts", (req,res)=>{
+    let {username , content} = req.body;
+    posts.push({username , content});
+
+    // posts.push({username : req.body.username, content : req.body.content});
+});
+
+ 
